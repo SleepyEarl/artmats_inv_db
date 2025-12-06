@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    background: #0D0A0B;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 48px;
+    background: linear-gradient(90deg,#3b0711,#6a0e25);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.45);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.6px;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color .18s ease;
+    opacity: .95;
+}
+
+.nav a:hover { color: #ffd6c2; }
+.nav a.active { color: #ff7a45; }
+
+/* FIXED: add display flex and center everything */
+.hero {
+    min-height: calc(100vh - 76px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+    box-sizing: border-box;
+}
+
+.hero-text {
+    max-width: 880px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 36px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+/* headings */
+.hero-text h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffd7bf;
+}
+
+.hero-text h2 {
+    margin: 0;
+    font-size: 44px;
+    line-height: 1.08;
+    font-weight: 800;
+    color: #fff;
+}
+
+.hero-text p {
+    margin: 0;
+    font-size: 16px;
+    color: #e6e6e6;
+    max-width: 720px;
+}
+
+.hero-text span {
+    color: #ff7a45;
+}
+
+.explore-btn {
+    display: inline-block;
+    margin-top: 22px;
+    background: linear-gradient(90deg,#ff7a45,#e0480f);
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 999px;
+    font-weight: 700;
+    letter-spacing: .6px;
+    box-shadow: 0 8px 24px rgba(224,72,15,0.28);
+    transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+
+.explore-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(224,72,15,0.32);
+    opacity: 0.98;
+}
+
+/* responsive */
+@media (max-width: 720px) {
+    .hero-text h2 { font-size: 32px; }
+    .hero-text { padding: 24px; }
+    header { padding: 14px 18px; }
+}
